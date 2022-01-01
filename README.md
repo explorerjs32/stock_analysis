@@ -16,3 +16,8 @@ Creates the user's stock portfolio by creating a csv file with the following inf
 - Average price of the investments
 - Amount invested in each individual stock
 - Last date the user modified the portfolio
+
+**edit_portfolio.py**
+
+Adds additional shares that the user has purchased into an existing portfolio. It considers the stock price at a given date and time and it re-calculates the number of shares, average price of the stock, and the total amount
+invested after the purchase 
