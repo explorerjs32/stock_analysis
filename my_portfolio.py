@@ -3,6 +3,8 @@ import pandas as pd
 import yfinance as yf
 import os
 from datetime import date
+from natsort import natsorted, index_natsorted, order_by_index
+
 
 def add_to_portfolio(portfolio, portfolio_dir, portfolio_name):
     print('Add new stocks to your portfolio:\n')

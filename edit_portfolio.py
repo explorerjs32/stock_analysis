@@ -37,6 +37,9 @@ def add_shares(portfolio, portfolio_dir, portfolio_name):
     # Calcuate the new averaged price of your holdings (avg price = amount invested/number of shares)
     portfolio.Average_Price[index] = round(portfolio.Amount_Invested[index]/portfolio.Shares[index], 2)
 
+    # Update the modified date
+    portfolio.Date_Last_Modified[index] = mod_date
+
     # Sort the stocks based on their tickers
     portfolio = portfolio.reindex(index=order_by_index(portfolio.index, index_natsorted(portfolio['Ticker'])))
     portfolio.to_csv(portfolio_dir+portfolio_name, header=True, index=False)
